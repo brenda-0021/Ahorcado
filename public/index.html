@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Juego del Ahorcado</h1>
+    </header>
+
+    <div class="game-container">
+      <div class="left-section">
+        <canvas id="hangmanCanvas" width="400" height="400"></canvas>
+      </div>
+
+      <div class="right-section">
+        <div class="stats">
+          <p>
+            Categoría:
+            <select id="category-select">
+              <option value="Frutas">Frutas</option>
+              <option value="Animales">Animales</option>
+              <option value="Colores">Colores</option>
+              <option value="Paises">Países</option>
+              <option value="Deportes">Deportes</option>
+              <option value="Profesiones">Profesiones</option>
+              <option value="Ciudades">Ciudades</option>
+              <option value="Comida">Comida</option>
+            </select>
+          </p>
+          <p>Intentos restantes: <span id="attempts">6</span></p>
+          <p>Temporizador: <span id="timer">02:00</span></p>
+        </div>
+
+        <div class="word-display">
+          <p id="word">_ _ _ _ _</p>
+        </div>
+
+        <div class="message" id="message"></div>
+        <div class="wrong-letters" id="wrong-letters"></div>
+        <div class="remaining-attempts" id="remaining-attempts"></div>
+
+        <div class="alphabet">
+          <div id="letters">
+            <button class="alphabet-btn">A</button>
+            <button class="alphabet-btn">B</button>
+            <button class="alphabet-btn">C</button>
+            <button class="alphabet-btn">D</button>
+            <button class="alphabet-btn">E</button>
+            <button class="alphabet-btn">F</button>
+            <button class="alphabet-btn">G</button>
+            <button class="alphabet-btn">H</button>
+            <button class="alphabet-btn">I</button>
+            <button class="alphabet-btn">J</button>
+            <button class="alphabet-btn">K</button>
+            <button class="alphabet-btn">L</button>
+            <button class="alphabet-btn">M</button>
+            <button class="alphabet-btn">N</button>
+            <button class="alphabet-btn">Ñ</button>
+            <button class="alphabet-btn">O</button>
+            <button class="alphabet-btn">P</button>
+            <button class="alphabet-btn">Q</button>
+            <button class="alphabet-btn">R</button>
+            <button class="alphabet-btn">S</button>
+            <button class="alphabet-btn">T</button>
+            <button class="alphabet-btn">U</button>
+            <button class="alphabet-btn">V</button>
+            <button class="alphabet-btn">W</button>
+            <button class="alphabet-btn">X</button>
+            <button class="alphabet-btn">Y</button>
+            <button class="alphabet-btn">Z</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
